@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+* {
+    border: 0;
+    background: transparent;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+@keyframes load {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+     
+    }
+    100% {
+        background-position: 90% 0%;
+    }
+}
+@keyframes batida {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+}
+@keyframes batidax {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(1.03);
+    }
+}
+@keyframes batiday {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.1;
+        transform: scale(1.03);
+    }
+}
+@keyframes papel{
+0%{
+    background-image: url('../img/fundo.jpg');
+}
+33%{
+    background-image: url('../img/fundo2.jpg');
+}
+66%{
+    background-image: url('../img/fundo3.png');
+}
+100%{
+    background-image: url('../img/fundo.jpg');
+
+}
+}
+body{
+    background-color: #cccccc00;
+    background-image: url('../img/fundo.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+a, a:link, a:visited, a:active, a:hover {
+    font-family: arial;
+    font-size: 11px;
+    color: #666;
+    text-decoration: none;
+}
+.music-info {
+    position: absolute;
+    right: 3vw;
+    width: 20vw;
+    margin: 0px 0px 0 0;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    float: right;
+    letter-spacing: 0.2em;
+    font-weight: 10;
+    line-height: 2.3vh;
+    font-size: 1.5vh;
+    transform: skew(-30deg);
+    border-style: dashed;
+    border-image-source: linear-gradient(0deg,red, orange);
+    border-image-slice: 1;
+    border-width: 2px;
+
+}
+.music-info span{
+    transform: skew(30deg);
+}
+body{
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+.pulsar{
+    height: 70vh;
+    width:35vw ;
+    align-content: center;
+}
+.pulsar div img{
+    margin:0 auto;
+    height: 70vh;
+    width: 35vw;
+}
+
+.logotipo{
+width: max-content;
+position: absolute;
+height:70vh;
+}
+.pulsar :nth-child(1) {
+}
+.pulsar :nth-child(2) {
+    opacity: 0.4;
+    animation: batida.5s ease-in-out infinite;
+}
+.pulsar :nth-child(3) {
+    opacity: 0.8;
+    animation: batidax.5.5s ease-in-out infinite;
+}
+.pulsar :nth-child(4) {
+    opacity: 1;
+    animation: batiday.6s ease-in-out infinite;
+}
+.musical{
+    width: 20vw;
+    height: 10vh;
+}
+.fire{
+    position: absolute;
+    left: 10px;
+    margin: 0px;
+    padding:1vw;
+}
+
+.fire:hover + .menu{
+    opacity: 100%;
+    width: fit-content;
+    display: block;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right:1vw ;
+}
+.fire:hover{
+    
+}
+.menu{
+    font-family: Arial, Helvetica, serif;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left:45px;
+    padding-left: 0px;
+    padding-right:0vw ;
+    top: 5vh;
+    height: fit-content;
+    margin: 0px;
+    font-weight: 400;
+    width: 0px;
+}
+.ops{
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    vertical-align: center;
+    text-shadow: 1px 1px wheat;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+}
+#regras.ops:hover{
+    border-color: black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#staff.ops:hover{
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+#staff.ops:hover > img{
+content: url("../img/icon-ternobranco.png");
+}
+#cpr.ops:hover{
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+.menu:hover {
+    padding-right:1vw ;
+    display: block;
+    width: fit-content;
+    height: 100px;
+    padding-left: 10px;
+}
+.menu:hover :first-child{
+    opacity: 100%;
+}
+.loaders{
+    margin-top: 5vh;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2vh;
+}
+.loader{
+    border-radius: 10px;
+    margin-bottom: 0.5vw;
+    background: linear-gradient(90deg,
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),orange ,rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)
+    );
+    background-size: 200% 100%;
+    padding: 0.5vw;    
+    animation: load .9s infinite alternate ease-in-out;
+}
+.loader1{
+    border-radius: 10px;
+    background: linear-gradient(90deg,
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),orange ,rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.8)
+    );
+    background-size: 300% 100%;
+    padding: 0.5vw;
+    animation: load 2s infinite alternate ease-in-out;
+
+}
+#regras.ops:hover{
+    border-color: black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#staff.ops:hover ~ .pulsar{
+opacity: 0%;
+}
+.law{
+    display: none;
+    width: 0vw;
+    color: white;
+
+}
+.law ul{
+    border-radius: 10px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1vw;
+    list-style-type: none;
+    scrollbar-width: 2px;
+}
+.law ul::-webkit-scrollbar{
+    width:0px;
+    background: transparent; 
+}
+.law li{
+    margin-bottom: 0.5vh;
+}
+#item5{
+    list-style-type: circle;
+}
+#voltar-btn{
+    font-weight: 900;
+    border: 1px white;
+    color: aliceblue;
+    background-color: rgba(1, 1, 1, 0.3);
+    border-radius: 10px;
+    padding: 5px;
+}
+.team{
+    display: none;
+    position: absolute;
+    left: 10px;
+    bottom:50vh;
+    padding: 1vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    font-weight: 700;
+
+}
+#cursor{
+    z-index: 100;
+    pointer-events : none;
+    position: absolute;
+}
